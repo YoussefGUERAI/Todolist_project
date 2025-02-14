@@ -51,12 +51,13 @@ form.addEventListener("keydown",function(e){
                     task.querySelector("span").style.display = "none";
                     task.querySelector("i").style.display = "none";  // Hide non-matching task
                    
+                    
                 }
             });
 
     });
 
-    // span kaytmsse7 li makaytmsse7ch whyy
+    // delete i and span instead of just deleting the li  
     
 
 
