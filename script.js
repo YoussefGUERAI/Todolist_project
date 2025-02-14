@@ -30,19 +30,34 @@ form.addEventListener("keydown",function(e){
         
     
 };
-
+});
 
     // all needed for the search of the objectives ;
 
     const search = document.querySelector(".search") ;
-    search.addEventListener("keydown",function(e){
-        e.preventDefault();
+    search.addEventListener("input",function(){
+        
         let search_value = search.querySelector('input[name="search"]').value;
         
-
+        const list = document.querySelectorAll(".list-group-item");
+            list.forEach(task => {
+                console.log(task);
+                if (search_value === "" || task.querySelector('span').innerText.includes(search_value)) {
+                    
+                    task.querySelector("span").style.display = "flex"; 
+                    task.querySelector("i").style.display = "flex"; 
+                    // Show the task
+                } else {
+                    task.querySelector("span").style.display = "none";
+                    task.querySelector("i").style.display = "none";  // Hide non-matching task
+                   
+                }
+            });
 
     });
 
+    // span kaytmsse7 li makaytmsse7ch whyy
+    
 
 
-});
+
